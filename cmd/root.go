@@ -18,7 +18,7 @@ var (
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
 	Use:   "arweaveutil",
-	Short: "An Arweave util, can transfer AR, check balance, generate Arweave keyfile",
+	Short: "An Arweave util, can transfer AR/PST, check balance, generate Arweave keyfile",
 
 	// Uncomment the following line if your bare application
 	// has an action associated with it:

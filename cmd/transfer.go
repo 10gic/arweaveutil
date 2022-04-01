@@ -31,6 +31,11 @@ var transferCmd = &cobra.Command{
 		var targetAddress = args[0]
 		var arAmount = args[1]
 
+		if !util.IsValidAddress(targetAddress) {
+			fmt.Printf("invalid target-address %v\n", targetAddress)
+			return
+		}
+
 		winstonAmount, err := util.ARToWinston(arAmount)
 		if err != nil {
 			fmt.Printf("failed to convert amount from AR to Winston: %v\n", err)

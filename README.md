@@ -1,11 +1,17 @@
 # arweaveutil
-An Arweave util, can transfer AR, check balance, generate Arweave keyfile.
+An Arweave util, can transfer AR/PST, check balance, generate Arweave keyfile.
 
 # Usage Example
 ## Transfer AR
 Transfer 1 AR to address dRFuVE-s6-TgmykU4Zqn246AR2PIsf3HhBhZ0t5-WXE:
 ```shell
 $ arweaveutil --wallet keyfile.json transfer dRFuVE-s6-TgmykU4Zqn246AR2PIsf3HhBhZ0t5-WXE 1
+```
+
+## Transfer PST
+Transfer 1 ARDRIVE to address dRFuVE-s6-TgmykU4Zqn246AR2PIsf3HhBhZ0t5-WXE:
+```shell
+$ arweaveutil --wallet keyfile.json transfer-pst ARDRIVE dRFuVE-s6-TgmykU4Zqn246AR2PIsf3HhBhZ0t5-WXE 1
 ```
 
 ## Check Balance

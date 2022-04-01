@@ -6,6 +6,7 @@ package cmd
 
 import (
 	"fmt"
+	"github.com/10gic/arweaveutil/util"
 	"github.com/everFinance/goar"
 
 	"github.com/spf13/cobra"
@@ -19,6 +20,11 @@ var balanceCmd = &cobra.Command{
 	Args:  cobra.MinimumNArgs(1),
 	Run: func(cmd *cobra.Command, args []string) {
 		var address = args[0]
+
+		if !util.IsValidAddress(address) {
+			fmt.Printf("invalid address %v\n", address)
+			return
+		}
 
 		client := goar.NewClient(globalOptNodeUrl)
 		balance, err := client.GetWalletBalance(address)
